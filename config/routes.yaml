@@ -1,3 +1,16 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+
+Index:
+    path: /
+    controller: App\Controller\IndexController::HomePage
+
+Contato:
+    path: /contato
+    controller: App\Controller\ContatoController::ContatoPage
+
+About:
+    path: /about
+    controller: App\Controller\AboutController::AboutPage
