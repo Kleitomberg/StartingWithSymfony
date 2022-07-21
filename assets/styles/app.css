@@ -22,3 +22,11 @@ div#t {
 div#t span{
     color: rgb(70, 159, 54);
 }
+
+div{
+    margin-top: 10px;
+}
+
+p.col-md-8.fs-4{
+    color: brown !important;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Criar Livros{% endblock %}
+
+ {% block body %}
+ 
+ <div class="container"> <h1> Cadastrar Livros</h1> </div>
+
+ <div class="container mt-3">
+ <form action="" method="POST" name="addLivro">
+
+    <input class="form-control mb-3" name="titulo"  type="text" placeholder="Titulo do livro">
+    <input class="form-control mb-3" name="autor"  type="text" placeholder="Autor">
+    <input  class="form-control mb-3" name="ano" type="number" name="ano" id="" placeholder="Ano">
+    <textarea class="form-control"  name="resumo" id="" cols="30" rows="10" placeholder="Resumo"></textarea>
+
+    <button type="submit" class="btn btn-success mt-3">Cadastrar</button>
+ </form>
+</div> 
+
+ {% endblock %}

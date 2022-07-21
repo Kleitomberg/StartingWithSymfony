@@ -18,3 +18,7 @@ About:
 Mensagem:
     path: /messages/{id}/like/{direction}
     controller: App\Controller\MensagensController::MessagesLike
+
+Livros:
+    path: /livros/create
+    controller: App\Controller\LivrosController::AddLivroPage
