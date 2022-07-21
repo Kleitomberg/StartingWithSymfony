@@ -3,9 +3,11 @@
 {% block title %}Livro{% endblock %}
 
 {% block body %}
-    <h1>Livro</h1>
 
-    <table class="table">
+<div class="container">
+    <h1 class="mt-3">{{ livro.titulo }}</h1>
+
+    <table class="table table-striped mt-4  ">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -17,7 +19,7 @@
             </tr>
             <tr>
                 <th>Autor</th>
-                <td>{{ livro.autor }}</td>
+                <td>{{ livro.Autorname }}</td>
             </tr>
             <tr>
                 <th>Ano</th>
@@ -30,9 +32,14 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_livro_index') }}">back to list</a>
 
-    <a href="{{ path('app_livro_edit', {'id': livro.id}) }}">edit</a>
+
+<div class="d-flex gap-3">
+    <a class="btn btn-warning" href="{{ path('app_livro_index') }}">back to list</a>
+
+    <a class="btn btn-outline-primary" href="{{ path('app_livro_edit', {'id': livro.id}) }}">Editar</a>
 
     {{ include('livro/_delete_form.html.twig') }}
+</div>
+</div>
 {% endblock %}

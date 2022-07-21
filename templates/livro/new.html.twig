@@ -3,9 +3,15 @@
 {% block title %}New Livro{% endblock %}
 
 {% block body %}
-    <h1>Create new Livro</h1>
+
+<div class="container">
+    <h1 class="mt-3 text-center">Cadastrar Novo Livro</h1>
 
     {{ include('livro/_form.html.twig') }}
 
-    <a href="{{ path('app_livro_index') }}">back to list</a>
+    <a class="btn btn-warning" href="{{ path('app_livro_index') }}">back to list</a>
+
+</div>
+
+
 {% endblock %}

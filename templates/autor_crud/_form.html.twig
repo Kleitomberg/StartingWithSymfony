@@ -1,4 +1,10 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+<div class="container">
+    <div class="form-group">
+        {{ form_label(form.nome) }} 
+        {{ form_widget(form.nome,{'attr':{'class':'form-control', 'placeholder':'Nome do Autor'}}) }}
+    </div>
+    <button class="btn btn-success mt-3">{{ button_label|default('Cadastrar') }}</button>
+</div>
 {{ form_end(form) }}
