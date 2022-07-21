@@ -28,8 +28,7 @@ class LivrosController extends AbstractController{
             $autor = $_POST["autor"];
             $ano = $_POST["ano"];
             $resumo = $_POST["resumo"];  
-     
-        
+             
 
         $livro = new Livro();
         $livro->setTitulo($titulo);

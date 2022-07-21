@@ -1,0 +1,17 @@
+
+ <div class="container"> 
+ <form action="" method="POST" name="livro">
+
+   
+    <input class="form-control mb-3" name="livro[titulo]"  type="text" placeholder="Titulo do livro">
+    <input class="form-control mb-3"  name="livro[autor]"  type="text" placeholder="Autor">
+    <input  class="form-control mb-3" name="livro[ano]" type="number" name="ano" id="" placeholder="Ano">
+    <textarea class="form-control"  name="livro[resumo]" id="" cols="30" rows="10" placeholder="Resumo"></textarea>
+    <input type="hidden" id="livro__token" name="livro[_token]" value="28f4d62bc7d9e1b75bd87962a4400f.HRVxHhVvlZBajtpgMPxtkTstMek7iBQTnrgLzMzj4Cw.ckA3WFYMrcEu17cHXc0E3nJpfph-z3wi2dROhaeQoV0rOD5oWj6twQi37g">
+   
+    <button class="btn btn-success mt-2">{{ button_label|default('save') }}</button>
+    
+ </form>
+
+    
+</div>
