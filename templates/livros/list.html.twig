@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Criar Livros{% endblock %}
+
+ {% block body %}
+ 
+ <div class="container"> <h1> Livros cadastrados</h1> </div>
+
+ <div class="container mt-3">
+<a href="{{path('Livros')}}" class="btn btn-primary">Adicionar Livros</a>
+    <ul class="mt-3">
+        {% for l in livros%}
+        <li>{{l.titulo}}</li>
+        {%endfor%}
+        
+    </ul>
+ 
+</div> 
+
+ {% endblock %}

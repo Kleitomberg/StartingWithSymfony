@@ -22,3 +22,7 @@ Mensagem:
 Livros:
     path: /livros/create
     controller: App\Controller\LivrosController::AddLivroPage
+
+LivrosList:
+    path: /livros/list
+    controller: App\Controller\LivrosController::ListLivrosPage

@@ -45,11 +45,28 @@ class LivrosController extends AbstractController{
         // actually executes the queries (i.e. the INSERT query)
         $entityManager->flush();
         
+
+        $repository = $doctrine->getRepository(Livro::class);
+        $livros = $repository->findAll();
         
-        return new Response(' Livro Salvo com id '.$livro->getId());
+        return $this->render("livros/list.html.twig", [
+            "livros"=>$livros
+        ]);
+        #return new Response(' Livro Salvo com id '.$livro->getId());
+        
     }
 
         return $this->render("livros/create.html.twig");
+    }
+
+    public function ListLivrosPage(ManagerRegistry $doctrine){
+
+        $repository = $doctrine->getRepository(Livro::class);
+        $livros = $repository->findAll();
+       
+        return $this->render("livros/list.html.twig", [
+            "livros"=>$livros
+        ]);
     }
     
 }
