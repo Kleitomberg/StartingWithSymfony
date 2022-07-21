@@ -16,8 +16,7 @@ class Livro implements \JsonSerializable
     #[ORM\Column(length: 255)]
     private ?string $titulo = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $autor = null;
+    
 
     #[ORM\Column]
     private ?int $ano = null;
@@ -25,10 +24,15 @@ class Livro implements \JsonSerializable
     #[ORM\Column(length: 255)]
     private ?string $resumo = null;
 
+    #[ORM\ManyToOne(inversedBy: 'livros')]
+    private ?Autor $AutorName = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
+
+  
 
     public function getTitulo(): ?string
     {
@@ -42,17 +46,7 @@ class Livro implements \JsonSerializable
         return $this;
     }
 
-    public function getAutor(): ?string
-    {
-        return $this->autor;
-    }
-
-    public function setAutor(string $autor): self
-    {
-        $this->autor = $autor;
-
-        return $this;
-    }
+       
 
     public function getAno(): ?int
     {
@@ -83,10 +77,24 @@ class Livro implements \JsonSerializable
         return[
             "id"=> $this->getId(),
             "titulo"=> $this->getTitulo(),
-            "autor"=> $this->getAutor(),
             "ano"=>$this->getAno(),
             "resumo"=>$this->getResumo()
         ];
         
     }
+
+    public function getAutorName(): ?Autor
+    {
+        return $this->AutorName;
+    }
+
+    public function setAutorName(?Autor $AutorName): self
+    {
+        $this->AutorName = $AutorName;
+
+        return $this;
+    }
+
+    
+ 
 }
