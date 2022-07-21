@@ -7,7 +7,7 @@
 
     {{ include('livro_crud/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_livro_crud_index') }}">back to list</a>
+    <a href="{{ path('app_livro_crud_index') }}" class="btn btn-primary">Voltar para Lista</a>
 
     {{ include('livro_crud/_delete_form.html.twig') }}
 {% endblock %}

@@ -1,17 +1,30 @@
+{{ form_start(form) }}
 
- <div class="container"> 
- <form action="" method="POST" name="livro">
+<div class="container">
+    <h3 class="mt-5 mb-5 offset-md-3">Criar novo Livro</h3>
+    <div class="col-md-6 offset-md-3">
+        
+    <div class="form-group">
+        {{ form_label(form.titulo) }}
+        {{ form_widget(form.titulo,{'attr':{'class':'form-control'}}) }}
+    </div>
 
-   
-    <input class="form-control mb-3" name="livro[titulo]"  type="text" placeholder="Titulo do livro">
-    <input class="form-control mb-3"  name="livro[autor]"  type="text" placeholder="Autor">
-    <input  class="form-control mb-3" name="livro[ano]" type="number" name="ano" id="" placeholder="Ano">
-    <textarea class="form-control"  name="livro[resumo]" id="" cols="30" rows="10" placeholder="Resumo"></textarea>
-    <input type="hidden" id="livro__token" name="livro[_token]" value="28f4d62bc7d9e1b75bd87962a4400f.HRVxHhVvlZBajtpgMPxtkTstMek7iBQTnrgLzMzj4Cw.ckA3WFYMrcEu17cHXc0E3nJpfph-z3wi2dROhaeQoV0rOD5oWj6twQi37g">
-   
-    <button class="btn btn-success mt-2">{{ button_label|default('save') }}</button>
-    
- </form>
+    <div class="form-group">
+        {{ form_label(form.autor) }}
+        {{ form_widget(form.autor,{'attr':{'class':'form-control'}}) }}
+    </div>
 
-    
+    <div class="form-group">
+        {{ form_label(form.ano) }}
+        {{ form_widget(form.ano,{'attr':{'class':'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.resumo) }}
+        {{ form_widget(form.resumo,{'attr':{'class':'form-control'}}) }}
+    </div>
+
+    <button class="btn btn-success mt-3">{{ button_label|default('Save') }}</button>
 </div>
+</div>
+{{ form_end(form) }}
