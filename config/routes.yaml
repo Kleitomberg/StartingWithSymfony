@@ -12,5 +12,9 @@ Contato:
     controller: App\Controller\ContatoController::ContatoPage
 
 About:
-    path: /about
+    path: /about/{slug}
     controller: App\Controller\AboutController::AboutPage
+
+Mensagem:
+    path: /messages/{id}/like/{direction}
+    controller: App\Controller\MensagensController::MessagesLike

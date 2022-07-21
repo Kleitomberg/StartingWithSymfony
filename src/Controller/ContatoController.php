@@ -9,7 +9,9 @@ class ContatoController extends AbstractController{
         public function ContatoPage(){
 
 
-            return $this-> render('contato.html.twig',);
+            return $this-> render('contato.html.twig',[
+                "pagina"=>"Contato",
+            ]);
 
         }
 }

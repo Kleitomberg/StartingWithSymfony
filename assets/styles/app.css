@@ -1,0 +1,24 @@
+@import "~bootstrap";
+
+body {
+    /*background-color: rgb(248, 248, 248);*/
+}
+
+#barra{
+    background-color: rgb(39, 171, 211) !important;
+    color: rgb(255, 35, 35) !important;
+    
+}
+
+#cartao{
+    width: 18vw;
+}
+
+div#t {
+    align-items: center;
+    gap: 12px;
+}
+
+div#t span{
+    color: rgb(70, 159, 54);
+}

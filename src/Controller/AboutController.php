@@ -6,8 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AboutController extends AbstractController{
 
-    public function AboutPage(){
+    public function AboutPage($slug){
 
-        return $this-> render('aboutus.html.twig',);
+        dump($slug);
+        return $this-> render('aboutus.html.twig',[
+            "pagina"=>"Quem Somos",
+            "parametro"=> $slug
+        ]);
     }
 }
